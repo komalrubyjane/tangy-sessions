@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Special+Elite&family=Caveat:wght@700&display=swap');
+@import "tailwindcss";
+@import "./animations.css";
+@import "./cursor.css";
+
+@theme {
+  --color-tangy-black: #191410;
+  --color-tangy-oxblood: #4c1210;
+  --color-tangy-rust: #8a2320;
+  --color-tangy-mustard: #d1a437;
+  --color-tangy-brown: #241a12;
+  --color-tangy-paper: #e9decb;
+  --color-tangy-cream: #ecdcaf;
+  
+  --font-poster: 'Anton', 'Oswald', system-ui, sans-serif;
+  --font-display: 'Oswald', sans-serif;
+  --font-editorial: 'Oswald', sans-serif;
+  --font-archive: 'Special Elite', 'Courier New', monospace;
+}
+
+@layer base {
+  :root {
+    --red-1: #8a2320;
+    --red-2: #6e1a19;
+    --red-3: #4c1210;
+    --red-bright: #c2272a;
+    --cream: #ecdcaf;
+    --cream-2: #e2cd97;
+    --paper: #e9decb;
+    --ink: #241a12;
+    --black: #191410;
+    --gold: #d1a437;
+
+    --f-poster: 'Anton', 'Oswald', system-ui, sans-serif;
+    --f-display: 'Oswald', sans-serif;
+    --f-editorial: 'Oswald', sans-serif;
+    --f-archive: 'Special Elite', 'Courier New', monospace;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--black);
+    color: var(--paper);
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ==================================
+     GLOBAL MOBILE BREATHING ROOM
+     Keeps all sections from feeling
+     congested on small screens.
+   ================================== */
+  @media (max-width: 640px) {
+    /* Universal safe horizontal padding */
+    .mobile-px {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    /* Reduce heavy box-shadows on mobile */
+    .shadow-\[20px_20px_0px_\#11100C\] {
+      box-shadow: 8px 8px 0px #11100C;
+    }
+    .shadow-\[15px_15px_0px_\#11100C\] {
+      box-shadow: 6px 6px 0px #11100C;
+    }
+    .shadow-\[25px_25px_0px_\#11100C\] {
+      box-shadow: 10px 10px 0px #11100C;
+    }
+
+    /* Breathable section vertical spacing */
+    .section-py-mobile {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+}
+
+/* Custom 1970s Vintage Poster Typography Classes */
+.font-poster {
+  font-family: 'Anton', 'Oswald', system-ui, sans-serif;
+}
